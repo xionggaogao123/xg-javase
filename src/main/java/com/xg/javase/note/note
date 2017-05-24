@@ -11,3 +11,17 @@
         git add -A  #增加自己所修改的代码
         git commit -a #提交所有修改的代码
         git push origin develop  #提交代码到develop
+
+        git pull # 从远程分支拉取代码
+
+
+(2):jdk1.8 新特性
+        Lambda 表达式
+
+        Stream API
+            ① Stream 不会存储元素
+            ② 不会改变源对象，创建一个新的流
+            ③  操作是延迟的
+
+
+
