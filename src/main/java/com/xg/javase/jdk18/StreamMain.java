@@ -8,7 +8,9 @@ import com.xg.javase.bean.User;
 import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -77,5 +79,19 @@ public class StreamMain {
         userList.stream().map(User::getSex).forEach(System.out::println);
    }
 
+   @Test
+    public void test04() {
+       List<Integer> nums = Arrays.asList(1,2,3,4,5);
+       List<Integer> newNums = nums.stream().map(n->n+1).collect(Collectors.toList());
+       newNums.forEach((x)->System.out.println(x));
+    }
+
+    //一对多
+    @Test
+    public void test05() {
+       Stream<List<Integer>> inputStream = Stream.of(Arrays.asList(1),Arrays.asList(2,3),Arrays.asList(5,6,7));
+       Stream<Integer> outputStream = inputStream.flatMap((x)->x.stream()); //将多段流转换成一个总流
+       outputStream.forEach(x->System.out.println(x));
+    }
 
 }
