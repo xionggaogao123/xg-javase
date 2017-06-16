@@ -14,6 +14,26 @@
 
         git pull # 从远程分支拉取代码
 
+        git fetch <远程主机名> #一旦远程主机的版本库有了更新，需要将这些更新取回到本机
+
+        git fetch origin master #取回origin主机的master分支
+
+        git branch  -r #查看远程分支
+
+        git branch -a #查看所有分支
+
+        git checkout fix/xx-branch #创建一个新的分支
+
+        git checkout -b newBranch origin/master #表示在orgin/master的基础上，创建一个新的分支
+
+        git merge origin/master # 在本地分支上合并远程分支
+        或者
+        git rebase origin/master #表示在当场的分支上，合并orgin/master
+
+
+
+
+
 
 (2):jdk1.8 新特性
         Lambda 表达式
@@ -22,6 +42,15 @@
             ① Stream 不会存储元素
             ② 不会改变源对象，创建一个新的流
             ③  操作是延迟的
+
+
+
+(3):IO操作
+        完成图片的读写，图片的下载
+
+
+
+(4):guava 学习
 
 
 
