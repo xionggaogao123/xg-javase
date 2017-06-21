@@ -12,6 +12,13 @@ public class User {
 
     public User(){}
 
+    public User(Long id,String name,String sex,double salary){
+        this.id = id;
+        this.name = name;
+        this.sex = sex;
+        this.salary = salary;
+    }
+
     public User(String name,String sex,double salary){
         this.name = name;
         this.sex = sex;
