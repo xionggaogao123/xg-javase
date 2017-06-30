@@ -13,8 +13,10 @@ import org.junit.Test;
 
 import java.math.BigInteger;
 import java.util.*;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 /**
  * Stream API
@@ -350,6 +352,19 @@ public class StreamMain {
         System.out.println("now jdk1.8 ="+result);
 
         List<Object> list = Lists.newArrayList(1,null,2,3);
+
+    }
+
+    @Test
+    public static void testPredicate() {
+        List<String> list = Lists.newArrayList("a","b","","c");
+        Long count = list.stream().filter(String::isEmpty).count();
+        System.out.println("count:"+count);
+
+        Long count1 = list.stream().filter(num -> !num.equals("")).count();
+        System.out.println("count1:"+count1);
+
+
 
     }
 
