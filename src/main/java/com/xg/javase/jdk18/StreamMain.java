@@ -356,7 +356,7 @@ public class StreamMain {
     }
 
     @Test
-    public static void testPredicate() {
+    public  void testPredicate() {
         List<String> list = Lists.newArrayList("a","b","","c");
         Long count = list.stream().filter(String::isEmpty).count();
         System.out.println("count:"+count);
